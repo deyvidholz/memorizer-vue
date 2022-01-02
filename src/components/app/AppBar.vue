@@ -4,7 +4,7 @@
 
     <v-spacer></v-spacer>
 
-    <v-btn text color="blue-grey darken-3">
+    <v-btn text color="blue-grey darken-3" @click="openDialog('addNewWord')">
       <v-icon size="32">mdi-plus</v-icon>
     </v-btn>
 

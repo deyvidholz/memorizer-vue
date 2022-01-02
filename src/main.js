@@ -7,6 +7,9 @@ import vuetify from "./plugins/vuetify";
 // @note using global css
 import "./assets/styles/global.css";
 
+// @note using global mixins
+import "./mixins/global";
+
 Vue.config.productionTip = false;
 
 new Vue({
