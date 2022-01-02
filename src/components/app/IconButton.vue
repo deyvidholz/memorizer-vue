@@ -1,5 +1,11 @@
 <template>
-  <v-btn color="teal" dark large :width="width ? width + 'px' : null">
+  <v-btn
+    color="teal"
+    dark
+    large
+    :width="width ? width + 'px' : null"
+    @click="handleClick"
+  >
     <v-icon> {{ icon }} </v-icon>
   </v-btn>
 </template>
@@ -14,6 +20,18 @@ export default {
     width: {
       type: String,
       default: null,
+    },
+    onClick: {
+      default: null,
+    },
+  },
+  methods: {
+    handleClick() {
+      if (!this.onClick) {
+        return;
+      }
+
+      this.onClick.call();
     },
   },
 };
