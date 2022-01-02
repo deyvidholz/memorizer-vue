@@ -5,9 +5,14 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    words: [],
     dialogs: {
       addNewWord: {
         show: false,
+      },
+      snackbar: {
+        show: false,
+        text: null,
       },
     },
   },
