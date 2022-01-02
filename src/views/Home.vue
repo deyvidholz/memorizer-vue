@@ -1,7 +1,7 @@
 <template>
   <div class="centralized">
     <div class="container text-center">
-      <p>What is the translation for...</p>
+      <p>What is the translation of...</p>
       <h1 class="display-4 orange--text text--darken-3">{{ word.name }}</h1>
 
       <v-text-field
@@ -11,7 +11,7 @@
         autofocus
         light
         class="mt-8"
-        :placeholder="`What's the meaning for '${word.name}'?`"
+        :placeholder="`What's the meaning of '${word.name}'?`"
         @keypress="enterToSubmit"
       />
 
