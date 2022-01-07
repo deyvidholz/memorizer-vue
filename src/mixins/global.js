@@ -24,8 +24,14 @@ Vue.mixin({
 
       this.$router.push({ name: routeName });
     },
-    loadFromDatabase() {
-      this.state.words = find();
+    loadFromDatabase(ordered = false) {
+      const words = find();
+
+      if (ordered) {
+        words.sort((w1, w2) => w1.sequentialHits - w2.sequentialHits);
+      }
+
+      this.state.words = words;
     },
   },
 });

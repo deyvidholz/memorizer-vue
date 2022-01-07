@@ -32,7 +32,7 @@ export default {
   },
 
   created() {
-    this.loadFromDatabase();
+    this.loadFromDatabase(true);
   },
 };
 </script>
