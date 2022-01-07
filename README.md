@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center"> 
-  <a href="https://memorizer-vue.vercel.app/" target="_blank">Try it out!</a>
+  <a href="https://memorizer.deyvidholz.dev" target="_blank">Try it out!</a>
 </h3>
 
 <h3 align="center"> 
