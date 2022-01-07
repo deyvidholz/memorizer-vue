@@ -1,6 +1,6 @@
 <template>
   <div class="centralized">
-    <div class="container text-center">
+    <v-container class="text-center">
       <template v-if="word">
         <p>What is the translation of...</p>
         <h1 class="display-4 orange--text text--darken-3">{{ word.name }}</h1>
@@ -23,7 +23,7 @@
       <template v-else>
         <h3 class="red--text">No words found</h3>
       </template>
-    </div>
+    </v-container>
   </div>
 </template>
 
