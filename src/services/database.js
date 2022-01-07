@@ -67,8 +67,8 @@ export function find() {
   let data = localStorage.getItem("words");
 
   if (!data) {
+    save([]);
     data = JSON.stringify([]);
-    save(data);
   }
 
   return JSON.parse(data);

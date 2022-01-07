@@ -1,22 +1,28 @@
 <template>
   <div class="centralized">
     <div class="container text-center">
-      <p>What is the translation of...</p>
-      <h1 class="display-4 orange--text text--darken-3">{{ word.name }}</h1>
+      <template v-if="word">
+        <p>What is the translation of...</p>
+        <h1 class="display-4 orange--text text--darken-3">{{ word.name }}</h1>
 
-      <v-text-field
-        v-model="translation"
-        solo
-        clearable
-        autofocus
-        light
-        class="mt-8"
-        :placeholder="`What's the meaning of '${word.name}'?`"
-        @keypress="enterToSubmit"
-      />
+        <v-text-field
+          v-model="translation"
+          solo
+          clearable
+          autofocus
+          light
+          class="mt-8"
+          :placeholder="`What's the meaning of '${word.name}'?`"
+          @keypress="enterToSubmit"
+        />
 
-      <Button text="Ready" :onClick="submit" width="200" />
-      <Snackbar />
+        <Button text="Ready" :onClick="submit" width="200" />
+        <Snackbar />
+      </template>
+
+      <template v-else>
+        <h3 class="red--text">No words found</h3>
+      </template>
     </div>
   </div>
 </template>
